@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>currentDocument</key>
+	<string>README</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -18,7 +20,26 @@
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>227</integer>
 	<key>metaData</key>
-	<dict/>
+	<dict>
+		<key>README</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>openDocuments</key>
+	<array>
+		<string>README</string>
+	</array>
 	<key>showFileHierarchyDrawer</key>
 	<false/>
 	<key>showFileHierarchyPanel</key>
@@ -34,6 +55,6 @@
 		</dict>
 	</dict>
 	<key>windowFrame</key>
-	<string>{{616, 269}, {1024, 742}}</string>
+	<string>{{615, 265}, {1024, 742}}</string>
 </dict>
 </plist>
