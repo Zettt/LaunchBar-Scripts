@@ -1,0 +1,1 @@
+tell application "GeekTool" to refresh all
