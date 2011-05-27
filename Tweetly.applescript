@@ -9,6 +9,15 @@
 --		2. Shorten links to https:// sites 
 --		3. Now you dont have to provide a link at the end of your tweet. This script checks if there is a link on your clipboard and pastes that one at the end of your tweet. In order to work you have to provide a "y" at the end of your tweet to check clipboard. "y" stands for "yes check clipboard" or similiar. ;)
 -----------------------------------------------------------------------   
+--
+-- Changes 27.05.2011: Re-enabled this script in the repository. Although I'm not using this one anymore!
+-- Since Twitter turned off basic authentication this needed reimplementation with something else. 
+-- Yesterday a user (@Jose_T) told me about supertweet.net. I've tested this today and it seems to be working fine.
+-- Please, just make sure you're using the same password on twitter.com and supertweet.net. 
+-- The keychain entry needs to be created correctly, as this script pulls its information from there.
+-- If unsure open Safari => Preferences => AutoFill an enable "User names and passwords". Then go to twitter.com
+-- and log in once. Open Keychain Access to make sure the information has been saved correctly. 
+-- Now set the same login password on supertweet.net
 
 -- take string from LaunchBar
 on handle_string(tweet)
@@ -44,8 +53,8 @@ on handle_string(tweet)
 	end tell
 	
 	-- update twitter
-	set twitter_status to quoted form of ("source=launchbarat&status=" & tweet_new)
-	set results to do shell script "curl --user " & twitter_login & " --data-binary " & twitter_status & " http://twitter.com/statuses/update.json"
+	set twitter_status to quoted form of ("status=" & tweet_new)
+	set results to do shell script "curl -u " & twitter_login & " -d " & twitter_status & " http://api.supertweet.net/1/statuses/update.json"
 	
 	-- display dialog results
 	my growlRegister()
