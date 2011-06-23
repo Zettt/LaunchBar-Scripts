@@ -1,12 +1,13 @@
+-- I want to delete that
 -- This script requires audiodevice, which can be obtained from here:
 -- http://whoshacks.blogspot.com/2009/01/change-audio-devices-via-shell-script.html
 
 -- tell application "GrowlHelperApp"
 --	set allNotifications to {"Switch Audio"}
 --	set enabledNotifications to {"Switch Audio"}
---	register as application Â
---		"Sound" all notifications allNotifications Â
---		default notifications enabledNotifications Â
+--	register as application ï¿½
+--		"Sound" all notifications allNotifications ï¿½
+--		default notifications enabledNotifications ï¿½
 --		icon of application "Sound"
 -- end tell
 
@@ -28,13 +29,13 @@ set cmd to do shell script audiodeviceCommand & "input " & quoted form of (chose
 
 if cmd is "" then
 	-- return "Input set to " & chosenDevice
-	tell application "GrowlHelperApp" to notify with name Â
-		"Switch Audio" title Â
-		"Switch Audio" description Â
+	tell application "GrowlHelperApp" to notify with name ï¿½
+		"Switch Audio" title ï¿½
+		"Switch Audio" description ï¿½
 		"Active input " & chosenDevice application name "Sound"
 else
-	tell application "GrowlHelperApp" to notify with name Â
-		"Switch Audio" title Â
-		"Switch Audio" description Â
+	tell application "GrowlHelperApp" to notify with name ï¿½
+		"Switch Audio" title ï¿½
+		"Switch Audio" description ï¿½
 		"Something went wrong. Open Terminal an check if /usr/local/bin/audiodevice is working" application name "Sound"
 end if
