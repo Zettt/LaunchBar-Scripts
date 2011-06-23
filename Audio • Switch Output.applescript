@@ -1,3 +1,5 @@
+-- I want to delete that 
+
 -- This script requires audiodevice, which can be obtained from here:
 -- http://whoshacks.blogspot.com/2009/01/change-audio-devices-via-shell-script.html
 
