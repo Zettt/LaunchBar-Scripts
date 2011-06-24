@@ -22,6 +22,3 @@ In Alfred create a new Shell shortcut:
 
 * *Command:* '/Users/YOU/Library/Application Support/LaunchBar/Actions/OmniFocusCLI.sh' {query}
 * Run silently.
-
-I would appreciate if someone could help getting this baby working with LaunchBar!
-
