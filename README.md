@@ -41,7 +41,7 @@ Don't forget to add your login credentials to your .netrc. Look at subdirectory 
 In Alfred create a new Shell shortcut:
 
 * *Command:* '/Users/YOU/Library/Application Support/LaunchBar/Actions/boxcar-growl.pl' {query}
-* Wrap in Quotes: NO
+* *Wrap in Quotes*: NO
 * Run silently.
 
 
