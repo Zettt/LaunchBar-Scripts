@@ -32,7 +32,7 @@ tell application "System Events"
 end tell
 
 -- initial delay
-delay 10
+-- delay 10
 
 -- starts all the applications needed
 set executeAppList to {"GrowlHelperApp", "Alfred", "Keyboard Maestro Engine", "Moom", "TextExpander", "HazelHelper", "Dropbox", "Watts", "GeekTool", "Time Sink"} as list
