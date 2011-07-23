@@ -44,4 +44,11 @@ In Alfred create a new Shell shortcut:
 * *Wrap in Quotes*: NO
 * Run silently.
 
+# loginitems #
+
+I've added a script that is **not** meant to be used with LaunchBar, Alfred or any other launcher. I figured it's just a nice script to share.
+
+loginitems description:
+
+This script is an attempt to fasten up login times. The original idea came from [Mac OS X Hints](http://hints.macworld.com/article.php?story=20091108173250445). The idea is to "queue up" login items and launch them conscutively rather than all at once.
 
