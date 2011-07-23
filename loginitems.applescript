@@ -1,26 +1,21 @@
--- =====================================================================
--- =         loginitems by Zettt from Mac OS X Screencasts             =
--- =====================================================================
--- = This script is an attempt to fasten login times                   =
--- = The original idea came from Mac OS X Hints                        =
--- = Thanks, guys, you've been a great inspiration                     =
--- = http://hints.macworld.com/article.php?story=20091108173250445     =
--- =====================================================================
--- = Checkout the screencast as well                                   =
--- = http://macosxscreencasts.com/en/tutorial/schnellerer-mac-tutorial =
--- =====================================================================
--- = I'm not responsible for any harm to your computer.                =
--- =====================================================================
+-- ======================================================
+-- =         loginitems by Zettt from Mac OS X Screencasts
+-- ======================================================
+-- = This script is an attempt to fasten login times
+-- = The original idea came from Mac OS X Hints
+-- = Thanks, guys, you've been a great inspiration
+-- = http://hints.macworld.com/article.php?story=20091108173250445
+-- ======================================================
+-- = Checkout the screencast as well
+-- = http://macosxscreencasts.com/en/tutorial/schnellerer-mac-tutorial
+-- ======================================================
+-- = v3: allowedAppList added: a list of apps that are allowed in Login Items
+--    everything else will be removed
+-- 
 
 -- A list of apps that are allowed in Login Items
 -- !!! Everything else will be removed !!!
-set allowedAppList to {"loginitems", "Alfred"}
--- Initial delay
-set initialDelay to 20
--- Delay between each application launch
-set theDelay to 4
--- List of apps to start (Please keep GrowlHelperApp at the _beginning_ if you want to get Growl notifications!)
-set executeAppList to {"GrowlHelperApp", "BusyCalAlarm", "Dropbox", "Alfred", "Keyboard Maestro Engine", "TextExpander", "HazelHelper", "MercuryMoverAgent", "TextMate", "Watts"} as list
+set allowedAppList to {"loginitems3", "SmartSleep Helper", "BusyCalAlarm", "DEVONthink Sorter"}
 
 tell application "System Events"
 	-- Get all apps in Login Items as list...
@@ -37,9 +32,11 @@ tell application "System Events"
 end tell
 
 -- initial delay
-delay initialDelay
+delay 10
 
--- Needed to delay 
+-- starts all the applications needed
+set executeAppList to {"GrowlHelperApp", "Alfred", "Keyboard Maestro Engine", "Moom", "TextExpander", "HazelHelper", "Dropbox", "Watts", "GeekTool", "Time Sink"} as list
+set theDelay to 5
 set delayOnce to false
 
 repeat with executeApp in executeAppList
@@ -56,13 +53,13 @@ repeat with executeApp in executeAppList
 		end if
 		
 		-- send the notification...
-		notify with name Â¬
-			"App Starting Notification" title Â¬
-			"Starting..." description Â¬
+		notify with name Â
+			"App Starting Notification" title Â
+			"Starting..." description Â
 			executeApp application name "System"
 	end tell
 	
-	-- wait a bit until the next application launches
+	-- wait a bit until the next application will be launching
 	delay theDelay
 	tell application "Finder" to set visible of process executeApp to false
 	
