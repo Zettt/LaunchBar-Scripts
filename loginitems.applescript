@@ -37,7 +37,7 @@ end tell
 -- delay 10
 
 -- starts all the applications needed
-set executeAppList to {"GrowlHelperApp", "Alfred", "Keyboard Maestro Engine", "Moom", "TextExpander", "HazelHelper", "Dropbox", "Watts", "GeekTool", "Time Sink"} as list
+set executeAppList to {"Growl", "Alfred", "Keyboard Maestro Engine", "Moom", "TextExpander", "HazelHelper", "Dropbox", "Watts", "GeekTool", "Time Sink"} as list
 set theDelay to 5
 set delayOnce to false
 
@@ -47,7 +47,7 @@ repeat with executeApp in executeAppList
 	tell application executeApp to launch
 	
 	-- display a growl notification
-	tell application "GrowlHelperApp"
+	tell application "Growl"
 		-- wait a couple of seconds to let growl launch
 		if delayOnce is false then
 			delay 5

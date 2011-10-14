@@ -45,7 +45,7 @@ on replaceString(theText, oldString, newString)
 end replaceString
 
 on growlAnnounce(txt)
-	tell application "GrowlHelperApp"
+	tell application "Growl"
 		notify with name Â
 			"LaunchBar" title Â
 			"Pastie" description txt Â

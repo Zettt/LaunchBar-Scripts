@@ -1,7 +1,7 @@
 -- This script requires audiodevice, which can be obtained from here:
 -- http://whoshacks.blogspot.com/2009/01/change-audio-devices-via-shell-script.html
 
--- tell application "GrowlHelperApp"
+-- tell application "Growl"
 --	set allNotifications to {"Switch Audio"}
 --	set enabledNotifications to {"Switch Audio"}
 --	register as application Â
@@ -15,7 +15,8 @@ property audiodeviceCommand : "/usr/local/bin/audiodevice "
 set inputDevices to do shell script audiodeviceCommand & "input list"
 -- display dialog inputDevices
 
-set AppleScript's text item delimiters to "\r"
+set AppleScript's text item delimiters to "
+"
 set inputDevicesList to text items of inputDevices
 set AppleScript's text item delimiters to {""}
 
@@ -28,12 +29,12 @@ set cmd to do shell script audiodeviceCommand & "input " & quoted form of (chose
 
 if cmd is "" then
 	-- return "Input set to " & chosenDevice
-	tell application "GrowlHelperApp" to notify with name Â
+	tell application "Growl" to notify with name Â
 		"Switch Audio" title Â
 		"Switch Audio" description Â
 		"Active input " & chosenDevice application name "Sound"
 else
-	tell application "GrowlHelperApp" to notify with name Â
+	tell application "Growl" to notify with name Â
 		"Switch Audio" title Â
 		"Switch Audio" description Â
 		"Something went wrong. Open Terminal an check if /usr/local/bin/audiodevice is working" application name "Sound"

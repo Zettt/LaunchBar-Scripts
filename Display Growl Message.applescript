@@ -36,14 +36,14 @@ on handle_string(message)
 end handle_string
 
 -- additional scripting for Growlnotification
-using terms from application "GrowlHelperApp"
+using terms from application "Growl"
 	on growlRegister()
-		tell application "GrowlHelperApp"
+		tell application "Growl"
 			register as application "LaunchBar" all notifications {"Message from the past"} default notifications {"Message from the past"} icon of application "LaunchBar.app"
 		end tell
 	end growlRegister
 	on growlNotify(grrTitle, grrDescription)
-		tell application "GrowlHelperApp"
+		tell application "Growl"
 			notify with name "Message from the past" title grrTitle description grrDescription application name "LaunchBar"
 		end tell
 	end growlNotify

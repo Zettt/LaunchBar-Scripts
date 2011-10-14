@@ -90,7 +90,7 @@ on growlNotify(actionString)
 	end tell
 	
 	if isRunning then
-		tell application "GrowlHelperApp"
+		tell application "Growl"
 			set the allNotificationsList to {"Action Added"}
 			set the enabledNotificationsList to {"Action Added"}
 			
