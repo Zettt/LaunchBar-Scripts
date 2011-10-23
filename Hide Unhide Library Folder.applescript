@@ -1,7 +1,7 @@
 set lib_folder to path to library folder from user domain
-set lib_visible to (visible of (info for lib_folder))
+set lib_visible to do shell script "ls -Ol ~ | grep \"Library\"" as text
 
-if lib_visible is false then
+if lib_visible contains "hidden" then
 	do shell script "chflags nohidden ~/Library/"
 	return "Library has been unhidden" as text
 else
