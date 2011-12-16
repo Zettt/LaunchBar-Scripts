@@ -10,12 +10,12 @@
 -- 
 
 -- where should the file be copied to? (absolute path, please!)
-set destination to "/Users/zettt/Dropbox/Public/tmp/"
+set destination to "/Users/YOU/Dropbox/Public/tmp/"
 -- this is your dropbox' public folder url
 -- you get this by going to your dropbox and selecting any file and then Dropbox => Copy Public Link
 -- afterwards delete the file 
--- eg.: http://dl.dropbox.com/u/6102/tmp/an%20awesome_cat.jpg ==> http://dl.dropbox.com/u/6102/tmp/
-set dropbox_public_path to "http://dl.dropbox.com/u/6102/tmp/"
+-- eg.: http://dl.dropbox.com/u/12345000/tmp/an%20awesome_cat.jpg ==> http://dl.dropbox.com/u/6102/tmp/
+set dropbox_public_path to "http://dl.dropbox.com/u/12345000/tmp/"
 
 set filelist to {}
 set cliplist to {}
@@ -40,7 +40,8 @@ repeat with current_file in filelist
 	set AppleScript's text item delimiters to ""
 	
 	-- build a list of public links
-	set the end of cliplist to dropbox_public_path & current_file & "\n" as string
+	set the end of cliplist to dropbox_public_path & current_file & "
+" as string
 	
 end repeat
 
