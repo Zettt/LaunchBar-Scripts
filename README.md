@@ -46,7 +46,7 @@ In Alfred create a new Shell shortcut:
 
 # loginitems #
 
-I've added a script that is **not** meant to be used with LaunchBar, Alfred or any other launcher. I figured it's just a nice script to share.
+I've added a script that is **not** meant to be used with LaunchBar, Alfred or any other launcher. I assumed it's just a nice script to share.
 
 loginitems description:
 
