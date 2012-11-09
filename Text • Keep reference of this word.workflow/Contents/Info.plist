@@ -8,7 +8,7 @@
 			<key>NSMenuItem</key>
 			<dict>
 				<key>default</key>
-				<string>Text • Keep reference to this word</string>
+				<string>Text • Keep reference of this word</string>
 			</dict>
 			<key>NSMessage</key>
 			<string>runWorkflowAsService</string>

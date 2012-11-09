@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>329</string>
+	<string>346</string>
 	<key>AMApplicationVersion</key>
-	<string>2.2</string>
+	<string>2.3</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -25,7 +25,7 @@
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>v.1.0.1</string>
+				<string>v.1.0.2</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Automator</string>
@@ -63,7 +63,7 @@
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.Set_Value_of_Variable</string>
 				<key>CFBundleVersion</key>
-				<string>1.0.1</string>
+				<string>1.0.2</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<true/>
 				<key>CanShowWhenRun</key>
@@ -133,7 +133,7 @@
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>1.0.1</string>
+				<string>1.0.2</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Automator</string>
@@ -159,12 +159,12 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}		set cmd to "echo \"" &amp; input &amp; "\" &gt;&gt; /Users/zettt/Desktop/new_words.txt"	do shell script cmd		do shell script "echo \"-------------------\" &gt;&gt; /Users/zettt/Desktop/new_words.txt"		return inputend run</string>
+					<string>on run {input, parameters}		set cmd to "echo \"" &amp; input &amp; "\" &gt;&gt; /Users/YOU/Desktop/new_words.txt"	do shell script cmd		do shell script "echo \"-------------------\" &gt;&gt; /Users/YOU/Desktop/new_words.txt"		return inputend run</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
 				<key>CFBundleVersion</key>
-				<string>1.0.1</string>
+				<string>1.0.2</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
@@ -235,7 +235,7 @@ end run</string>
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>v.1.0.1</string>
+				<string>v.1.0.2</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Automator</string>
@@ -273,7 +273,7 @@ end run</string>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.Get_Value_of_Variable</string>
 				<key>CFBundleVersion</key>
-				<string>1.0.1</string>
+				<string>1.0.2</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
@@ -379,9 +379,6 @@ end run</string>
 						<string>New Oxford American Dictionary</string>
 						<string>Oxford American Writer's Thesaurus</string>
 						<string>Deutsch-Englisch</string>
-						<string>Oxford Dictionary of English</string>
-						<string>Oxford Thesaurus of English</string>
-						<string>manpages</string>
 						<string>OpenThesaurus German</string>
 					</array>
 					<key>last selected dictionary URL</key>
@@ -447,7 +444,7 @@ end run</string>
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>1.0.1</string>
+				<string>1.0.2</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Automator</string>
@@ -473,12 +470,12 @@ end run</string>
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}		set cmd to "echo \"" &amp; input &amp; "\" &gt;&gt; /Users/zettt/Desktop/new_words.txt"	do shell script cmd		-- this is just a separator	do shell script "echo \"\" &gt;&gt; /Users/zettt/Desktop/new_words.txt"			return inputend run</string>
+					<string>on run {input, parameters}		set cmd to "echo \"" &amp; input &amp; "\" &gt;&gt; /Users/YOU/Desktop/new_words.txt"	do shell script cmd		-- this is just a separator	do shell script "echo \"\" &gt;&gt; /Users/YOU/Desktop/new_words.txt"			return inputend run</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
 				<key>CFBundleVersion</key>
-				<string>1.0.1</string>
+				<string>1.0.2</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
@@ -537,33 +534,33 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>0C3B134E-0BCB-4DC5-8CE0-BB7D2814FE2F</key>
+		<key>0E19BC57-EA38-43FC-A338-A7F5EABFBA9C</key>
+		<dict>
+			<key>from</key>
+			<string>8045A1A9-B14A-4AE1-BB05-1EF27FE679D3 - 8045A1A9-B14A-4AE1-BB05-1EF27FE679D3</string>
+			<key>to</key>
+			<string>BE5F0932-E519-4C2C-800E-B1C834A7E570 - BE5F0932-E519-4C2C-800E-B1C834A7E570</string>
+		</dict>
+		<key>BCA11020-2A3C-4D75-B305-EA9D47812E07</key>
 		<dict>
 			<key>from</key>
 			<string>BE5F0932-E519-4C2C-800E-B1C834A7E570 - BE5F0932-E519-4C2C-800E-B1C834A7E570</string>
 			<key>to</key>
 			<string>5BF8BC03-10B6-4164-9377-792D2F9C01D8 - 5BF8BC03-10B6-4164-9377-792D2F9C01D8</string>
 		</dict>
-		<key>24967FD2-BB7C-456F-AEE4-D5BAC52E5DF7</key>
+		<key>C62005F6-FAF3-4667-A1A9-205742CA0274</key>
 		<dict>
 			<key>from</key>
 			<string>B7D6007C-BDC0-4B53-9E73-BB6B35AFAFFE - B7D6007C-BDC0-4B53-9E73-BB6B35AFAFFE</string>
 			<key>to</key>
 			<string>8045A1A9-B14A-4AE1-BB05-1EF27FE679D3 - 8045A1A9-B14A-4AE1-BB05-1EF27FE679D3</string>
 		</dict>
-		<key>55840DA9-54B8-4600-81AF-93ECC7E3F749</key>
+		<key>FCEE4DF7-4556-47B3-BCCB-F540BD36CAD4</key>
 		<dict>
 			<key>from</key>
 			<string>D390CB87-DCC4-4673-B050-A9096768A80A - D390CB87-DCC4-4673-B050-A9096768A80A</string>
 			<key>to</key>
 			<string>B7D6007C-BDC0-4B53-9E73-BB6B35AFAFFE - B7D6007C-BDC0-4B53-9E73-BB6B35AFAFFE</string>
-		</dict>
-		<key>E9B08BA6-058B-44B7-8EF1-AF377E395BB7</key>
-		<dict>
-			<key>from</key>
-			<string>8045A1A9-B14A-4AE1-BB05-1EF27FE679D3 - 8045A1A9-B14A-4AE1-BB05-1EF27FE679D3</string>
-			<key>to</key>
-			<string>BE5F0932-E519-4C2C-800E-B1C834A7E570 - BE5F0932-E519-4C2C-800E-B1C834A7E570</string>
 		</dict>
 	</dict>
 	<key>state</key>
