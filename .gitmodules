@@ -1,6 +1,3 @@
 [submodule "OmniFocusCLI"]
 	path = OmniFocusCLI
 	url = https://github.com/binaryghost/OmniFocusCLI.git
-[submodule "boxcar-growl"]
-	path = boxcar-growl
-	url = https://github.com/sharl/boxcar-growl.git
