@@ -5,6 +5,11 @@
 	rmdir Actions/
 	mv LaunchBar-Scripts/ Actions/
 
+# ! Newest Additions ! #
+
+* Send to Pocket: Allows to send a URL to Pocket. Actions included for Safari and Chrome. This is even more awesome with [Keyboard Maestro](http://mosx.tumblr.com/post/34720575388).
+* Keep reference to this word: A Service that allows you to put a specific looked-up word into a text file on the Desktop. *This is a normal OS X Service and also works with LaunchBar!* Put in `~/Library/Services`, LaunchBar will index it then.
+
 # OmniFocusCLI #
 
 OmniFocusCLI is a project by [Don](https://github.com/binaryghost/OmniFocusCLI) that enables task creation using a small shell script.  
