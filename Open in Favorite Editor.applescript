@@ -18,8 +18,9 @@
 -- Version: 1.3
 -- 1.0: Initial release
 -- 1.1: Multiple file type support
--- 1.2 Added suggestions for improvements
--- 1.3 Documentation ;)
+-- 1.2: Added suggestions for improvements
+-- 1.3: Documentation
+-- 1.4: Fix for permission error in Acorn 
 -- 
 
 set fileList to {}
@@ -74,11 +75,11 @@ end repeat
 
 -- open in favorite editor
 repeat with currentFile in imageFileList
-	tell application favImageEditor to open currentFile
+	tell application favImageEditor to open (currentFile as POSIX file)
 end repeat
 
 repeat with currentFile in textFileList
-	tell application favTextEditor to open currentFile
+	tell application favTextEditor to open (currentFile as POSIX file)
 	-- you might want to put an additional "tell application "foo" to open currentFile" line
 	-- here in case you want to open, e.g. open a Markdown file in an editor
 	-- *and* a live preview app (like Marked).
