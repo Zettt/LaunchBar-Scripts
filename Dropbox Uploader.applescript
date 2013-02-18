@@ -11,11 +11,7 @@ try
 on error errorMessage number errorNumber
 	set _error to errorMessage
 	set _errorNum to errorNumber
-	display dialog "You haven't set up Dropbox-Uploader. It's easiest to do this step manually. Open a Terminal.
-	
-`cd ~/Library/Application Support/LaunchBar/Actions/Dropbox-Uploader`
-
-Finish setting up Dropbox-Uploader then come back and use this script."
+	display dialog "You haven't set up Dropbox-Uploader. It's easiest to do this step manually. Open a Terminal.\n\n`cd ~/Library/Application Support/LaunchBar/Actions/Dropbox-Uploader`\n\nFinish setting up Dropbox-Uploader then come back and use this script."
 end try
 
 set filelist to {}
@@ -41,11 +37,10 @@ end tell
 -- get public share url of shared files
 repeat with currentFile in filelist
 	set cmd to "$HOME" & quoted form of (dropboxUploaderPath & dropboxUploaderBin) & " " & "share" & " " & quoted form of (dropboxSharePath & currentFile)
-	
-	set the end of cliplist to (do shell script cmd) as string & "\n"
+	set the end of cliplist to ((do shell script cmd) as string) & "\n"
 end repeat
 
--- finally copy the results to the clipboard
+-- copy the results to the clipboard
 set the clipboard to cliplist as string
 
 -- play a nice sound to tell the user everything worked
