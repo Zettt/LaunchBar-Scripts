@@ -7,6 +7,7 @@
 
 # ! Newest Additions ! #
 
+* Share on Dropbox (API): This script is very similar to Share on Dropbox, but instead of generating URLs by itself it uses Dropbox's API to get shared files' Dropbox Share URL. Check out the file description inside for more details.
 * Send to Pocket: Allows to send a URL to Pocket. Actions included for Safari and Chrome. This is even more awesome with [Keyboard Maestro](http://mosx.tumblr.com/post/34720575388).
 * Keep reference to this word: A Service that allows you to put a specific looked-up word into a text file on the Desktop. *This is a normal OS X Service and also works with LaunchBar!* Put in `~/Library/Services`, LaunchBar will index it then.
 
