@@ -34,3 +34,12 @@ tell application "Finder"
 		display dialog cmd
 		do shell script cmd
 	end repeat
+end tell
+
+-- get public share url of shared files
+repeat with currentFile in filelist
+	
+	set cmd to "$HOME" & quoted form of (dropboxUploaderPath & dropboxUploaderBin) & " " & "share" & " " & quoted form of POSIX path of (currentFile as string) & " " & dropboxSharePath & filename
+	return cmd
+	
+end repeat
