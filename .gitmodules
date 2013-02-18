@@ -1,3 +1,6 @@
 [submodule "OmniFocusCLI"]
 	path = OmniFocusCLI
 	url = https://github.com/binaryghost/OmniFocusCLI.git
+[submodule "Dropbox-Uploader"]
+	path = Dropbox-Uploader
+	url = https://github.com/andreafabrizi/Dropbox-Uploader.git
