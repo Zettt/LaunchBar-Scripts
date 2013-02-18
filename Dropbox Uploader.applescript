@@ -1,5 +1,5 @@
 -- where should files be uploaded to?
-set dropboxSharePath to "/Dropbox/SharedFiles/"
+set dropboxSharePath to "/SharedFiles/"
 
 -- where is Dropbox Uploader
 set dropboxUploaderPath to "$HOME/Library/Application Support/LaunchBar/Actions/Dropbox-Uploader/"
