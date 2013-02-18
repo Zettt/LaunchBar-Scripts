@@ -14,7 +14,9 @@ Built on Dropbox-Uploader by Andrea Fabrizi https://github.com/andreafabrizi/Dro
 *)
 
 -- where should files be uploaded to?
-set dropboxSharePath to "/SharedFiles/"
+-- make sure this doesn't start with /Public 
+-- (that would defeat the point, wouldn't it?)
+set dropboxSharePath to "/Shared Files/"
 
 -- where is Dropbox Uploader
 set dropboxUploaderPath to "/Library/Application Support/LaunchBar/Actions/Dropbox-Uploader/"
