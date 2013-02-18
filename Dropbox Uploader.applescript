@@ -9,6 +9,11 @@ of calculating the URL, the API is used to get Dropbox Share URLs.
 Dropbox generates these individually per every access.
 This means you can share a file more "privately".
 
+Requirements: You need to get Dropbox-Uploader (included as submodule in 
+this repo or separately via below URL) setup in order to use this.
+This script does very minimal checking whether Dropbox-Uploader is
+configured correctly.
+
 Created by Andreas Zeitler on 2013-02-18
 Built on Dropbox-Uploader by Andrea Fabrizi https://github.com/andreafabrizi/Dropbox-Uploader 
 *)
