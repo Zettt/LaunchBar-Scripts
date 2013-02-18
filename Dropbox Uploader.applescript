@@ -1,3 +1,18 @@
+(*
+Share on Dropbox through Dropbox's API
+
+This script shares selected files in the Finder on Dropbox.
+It is similar in functionality to "Share on Dropbox", but instead
+of calculating the URL, the API is used to get Dropbox Share URLs.
+(https://www.dropbox.com/help/167/en)
+
+Dropbox generates these individually per every access.
+This means you can share a file more "privately".
+
+Created by Andreas Zeitler on 2013-02-18
+Built on Dropbox-Uploader by Andrea Fabrizi https://github.com/andreafabrizi/Dropbox-Uploader 
+*)
+
 -- where should files be uploaded to?
 set dropboxSharePath to "/SharedFiles/"
 
