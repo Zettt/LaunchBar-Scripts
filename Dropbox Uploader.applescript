@@ -21,13 +21,16 @@ end try
 set filelist to {}
 set cliplist to {}
 
+-- this uploads the file through the API
+-- note: your dropbox app will therefore *download* the file once it's uploaded
 tell application "Finder"
 	repeat with i in (selection as list)
 		set filename to name of i as string
 		set the end of filelist to filename
-		display dialog
+		display dialog filelist as string
 		
 		-- uploads one of the files to Dropbox through the API
-		set cmd to dropboxUploaderPath & dropboxUploaderBin & "upload" & quoted form of POSIX path of (i as string) & " " & dropboxSharePath
+		set cmd to "$HOME" & quoted form of (dropboxUploaderPath & dropboxUploaderBin) & " " & "upload" & " " & quoted form of POSIX path of (i as string) & " " & dropboxSharePath & filename
+		display dialog cmd
+		do shell script cmd
 	end repeat
-end tell
