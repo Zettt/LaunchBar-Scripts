@@ -42,7 +42,7 @@ end tell
 repeat with currentFile in filelist
 	set cmd to "$HOME" & quoted form of (dropboxUploaderPath & dropboxUploaderBin) & " " & "share" & " " & quoted form of (dropboxSharePath & currentFile)
 	
-	set the end of cliplist to (do shell script cmd) as string
+	set the end of cliplist to (do shell script cmd) as string & "\n"
 end repeat
 
 -- finally copy the results to the clipboard
