@@ -2,7 +2,7 @@
 set dropboxSharePath to "/SharedFiles/"
 
 -- where is Dropbox Uploader
-set dropboxUploaderPath to "$HOME/Library/Application Support/LaunchBar/Actions/Dropbox-Uploader/"
+set dropboxUploaderPath to "/Library/Application Support/LaunchBar/Actions/Dropbox-Uploader/"
 set dropboxUploaderBin to "dropbox_uploader.sh"
 
 -- check if Dropbox-Uploader is setup correctly
