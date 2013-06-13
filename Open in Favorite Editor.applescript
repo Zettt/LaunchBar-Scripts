@@ -15,12 +15,13 @@
 -- It takes the whole selection and considers their extensions for opening in an
 -- editor.
 --
--- Version: 1.3
+-- Version: 1.5
 -- 1.0: Initial release
 -- 1.1: Multiple file type support
 -- 1.2: Added suggestions for improvements
 -- 1.3: Documentation
 -- 1.4: Fix for permission error in Acorn 
+-- 1.5: Added video extensions (MPEG Streamclip)
 -- 
 
 set fileList to {}
@@ -40,6 +41,11 @@ set favImageEditor to "Acorn"
 set textTypes to {"txt", "md"}
 set textFileList to {}
 set favTextEditor to "MacVim"
+
+-- video
+set videoTypes to {"mp4", "mov", "m4v"}
+set videoFileList to {}
+set favVideoEditor to "MPEG Streamclip"
 
 -- get all selected Finder items and put them on a list of POSIX paths
 tell application "Finder"
@@ -70,19 +76,32 @@ repeat with currentFile in fileList
 			end if
 		end repeat
 		
+		repeat with videoType in videoTypes
+			if currentFile contains videoType then
+				set the end of videoFileList to currentFile
+			end if
+		end repeat
+		
 	end ignoring
 end repeat
 
 -- open in favorite editor
 repeat with currentFile in imageFileList
 	tell application favImageEditor to open (currentFile as POSIX file)
+	tell application favImageEditor to activate
 end repeat
 
 repeat with currentFile in textFileList
 	tell application favTextEditor to open (currentFile as POSIX file)
 	-- you might want to put an additional "tell application "foo" to open currentFile" line
-	-- here in case you want to open, e.g. open a Markdown file in an editor
+	-- here in case you want to open, e.g. a Markdown file, in an editor
 	-- *and* a live preview app (like Marked).
+	tell application favTextEditor to activate
+end repeat
+
+repeat with currentFile in videoFileList
+	tell application favVideoEditor to open (currentFile as POSIX file)
+	tell application favVideoEditor to activate
 end repeat
 
 
