@@ -1,2 +1,2 @@
 #!/bin/sh
-man -t "$0" | open -f -a "Preview"
+man -t "$@" | open -f -a "Preview"
