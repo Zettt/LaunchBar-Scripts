@@ -2,6 +2,9 @@
 --
 -- Restore a fixed set of enabled calendards. Proof of concept by
 -- Daniel (@danielpunkass) for Wave (@drwave)
+-- http://www.red-sweater.com/blog/2852/toggle-calendar-focus
+--
+-- Changed: Extension changed to .applescript for version control
 
 tell application "System Events"
 	if UI elements enabled is false then
