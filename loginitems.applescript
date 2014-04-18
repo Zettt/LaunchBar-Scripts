@@ -14,10 +14,11 @@
 --    everything else will be removed
 -- = v4: Lion changes: commented out line `-- delay 10`. Lion takes care of the
 --    the initial delay
+-- = v5: Now uses Notification Center notifications
 
 -- A list of apps that are allowed in Login Items
 -- !!! Everything else will be removed !!!
-set allowedAppList to {"loginitems3", "SmartSleep Helper", "BusyCalAlarm", "DEVONthink Sorter"}
+set allowedAppList to {"loginitems", "SmartSleep Helper", "BusyCalAlarm", "DEVONthink Sorter"}
 
 tell application "System Events"
 	-- Get all apps in Login Items as list...
@@ -46,20 +47,12 @@ repeat with executeApp in executeAppList
 	-- launch the current app 
 	tell application executeApp to launch
 	
-	-- display a growl notification
-	tell application "Growl"
-		-- wait a couple of seconds to let growl launch
-		if delayOnce is false then
-			delay 5
-			set delayOnce to true
-		end if
-		
-		-- send the notification...
-		notify with name Â
-			"App Starting Notification" title Â
-			"Starting..." description Â
-			executeApp application name "System"
-	end tell
+	-- display a notification
+	if delayOnce is false then
+		delay 5
+		set delayOnce to true
+	end if
+	display notification executeApp with title "App Starting Notification" subtitle "StartingÉ"
 	
 	-- wait a bit until the next application will be launching
 	delay theDelay
