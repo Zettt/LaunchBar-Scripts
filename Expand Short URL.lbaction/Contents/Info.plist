@@ -15,7 +15,7 @@
 		<key>LBDefaultScript</key>
 		<dict>
 			<key>LBScriptName</key>
-			<string>default.scpt</string>
+			<string>default.applescript</string>
 			<key>LBReturnsResult</key>
 			<true/>
 			<key>LBRunInBackground</key>
