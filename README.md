@@ -13,7 +13,6 @@
 	- I can't remember from the top of my head what else I changed, but I tried to make this repository leaner and cleaner. I hope you appreciate.
 	- Please note: *Deactivate all Actions that you don't use in the Index in LaunchBar! Especially those in `_Archive`!*
 
-
 # OmniFocusCLI #
 
 OmniFocusCLI is a project by [Don](https://github.com/binaryghost/OmniFocusCLI) that enables task creation using a small shell script.  
@@ -38,5 +37,4 @@ I've added a script that is **not** meant to be used with LaunchBar, Alfred or a
 
 loginitems description:
 
-This script is an attempt to fasten up login times. The original idea came from [Mac OS X Hints](http://hints.macworld.com/article.php?story=20091108173250445). The idea is to "queue up" login items and launch them conscutively rather than all at once.
-
+This script is an attempt to speed up login times. The original idea came from [Mac OS X Hints](http://hints.macworld.com/article.php?story=20091108173250445). The idea is to "queue up" login items and launch them conscutively rather than all at once.
