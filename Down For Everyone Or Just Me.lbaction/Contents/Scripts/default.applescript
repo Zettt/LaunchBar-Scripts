@@ -7,6 +7,11 @@ Copyright Mac OS X Screencasts 2014. All rights reserved.
 *)
 -- Changes
 -- 1.0: Initial version.
+-- 1.1: 
+--    - New icon
+--    - Code signed
+--    - Code refactored
+
 
 on run
 	set _url to the clipboard
@@ -20,6 +25,8 @@ end handle_string
 
 on checkAvailability(_testURL)
 	
+	(*
+	-- apparently this is not needed. 
 	-- strip off starting https:// and http://
 	if _testURL begins with "https://" then
 		set AppleScript's text item delimiters to "https://"
@@ -33,6 +40,7 @@ on checkAvailability(_testURL)
 		set _testURL to the item_list as string
 	end if
 	set AppleScript's text item delimiters to ""
+	*)
 	
 	-- check website availability
 	set cmd to do shell script "curl --silent 'http://www.downforeveryoneorjustme.com/" & Â
