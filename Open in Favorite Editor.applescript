@@ -47,6 +47,11 @@ set videoTypes to {"mp4", "mov", "m4v"}
 set videoFileList to {}
 set favVideoEditor to "MPEG Streamclip"
 
+-- audio
+set audioTypes to {"aif", "aiff", "aifc", "wav"}
+set audioFileList to {}
+set favAudioEditor to "Amadeus Pro"
+
 -- get all selected Finder items and put them on a list of POSIX paths
 tell application "Finder"
 	repeat with i in (selection as list)
@@ -82,6 +87,12 @@ repeat with currentFile in fileList
 			end if
 		end repeat
 		
+		repeat with audioType in audioTypes
+			if currentFile contains audioType then
+				set the end of audioFileList to currentFile
+			end if
+		end repeat
+		
 	end ignoring
 end repeat
 
@@ -104,6 +115,10 @@ repeat with currentFile in videoFileList
 	tell application favVideoEditor to activate
 end repeat
 
+repeat with currentFile in audioFileList
+	tell application favAudioEditor to open (currentFile as POSIX file)
+	tell application favAudioEditor to activate
+end repeat
 
 -- play a nice sound to tell the user everything worked
 do shell script "afplay /System/Library/Sounds/Submarine.aiff"
