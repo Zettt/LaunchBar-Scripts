@@ -24,7 +24,7 @@ if iTunesIsRunning is true then
 	tell application "iTunes"
 		
 		-- check whether iTunes is playing
-		if player state is stopped or player state is paused then
+		if player state is stopped then
 			-- iTunes is not playing 
 			display notification Â
 				"iTunes isn't playing at the moment." with title Â
