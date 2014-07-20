@@ -30,8 +30,8 @@ if iTunesIsRunning is true then
 				"iTunes isn't playing at the moment." with title Â
 				"Song Notification"
 			
-		else if player state is playing or player state is paused then
 			-- iTunes is paused or playing
+		else if player state is playing or player state is paused then
 			
 			-- get song information from iTunes
 			set currentSong to name of current track as string
@@ -39,7 +39,7 @@ if iTunesIsRunning is true then
 			set currentAlbum to album of current track as string
 			
 			-- show notificiation
-			display notification currentSong with title "Song Notification" subtitle currentArtist
+			display notification currentAlbum with title "Song Notification" subtitle currentArtist & " - " & currentSong
 		end if
 	end tell
 	
@@ -48,6 +48,4 @@ else if iTunesIsRunning is false then
 	-- iTunes is not running display a fail notification
 	display notification Â
 		"iTunes is not running" with title "Song Notification"
-	
-	
 end if
