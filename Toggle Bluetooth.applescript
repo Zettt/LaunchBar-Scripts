@@ -5,6 +5,7 @@ try
 	set cmd to do shell script blueutilPath & " power"
 on error
 	display notification "No blueutil binary found" with title "LaunchBar" subtitle "Toggle Bluetooth"
+	return
 end try
 
 
