@@ -52,4 +52,4 @@ end repeat
 set the clipboard to cliplist as string
 
 -- play a nice sound to tell the user everything worked :)
-do shell script "afplay /System/Library/Sounds/Submarine.aiff"
+display notification "Sharing successful. URL to file is now on clipboard" with title "LaunchBar" subtitle "Share on Dropbox" sound name "Submarine"
