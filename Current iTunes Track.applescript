@@ -27,7 +27,7 @@ if iTunesIsRunning is true then
 		if player state is stopped or player state is paused then
 			-- iTunes is not playing 
 			display notification Â
-				"iTunes isn't playing any track" with title Â
+				"iTunes isn't playing at the moment." with title Â
 				"Song Notification"
 			
 		else if player state is playing or player state is paused then
@@ -51,4 +51,3 @@ else if iTunesIsRunning is false then
 	
 	
 end if
-
