@@ -1,9 +1,19 @@
 # Installation #
 
-	git clone git@github.com:Zettt/LaunchBar-Scripts.git
-	mv Actions/* Launchbar-Scripts/
-	rmdir Actions/
-	mv LaunchBar-Scripts/ Actions/
+This repo contains various scripts for launchers and script runners. To install I created separate folders for each of them. I'll provide instructions for the ones that I use, you can hopefully figure out how this works with your launcher. If it differs much from my instructions. Feel free to send me a pull request of this readme file!
+
+## LaunchBar 6.1 ##
+
+Drag the actions/scripts that you want to use to `~/Library/Application Support/LaunchBar/Actions/` while holding down ⌘ and ⌥. This will create aliases to the original files which will be recognized by LaunchBar. All scripts linked that way will appear in LaunchBar's index.
+
+## Keyboard Maestro ##
+
+With Keyboard Maestro there are two directions you can take.
+
+1. Setup a new macro with an "Execute AppleScript" Action and tell it to execute an external script file.
+2. Setup a new macro with an "Execute AppleScript" Action, but this time copy & paste the script.
+
+The former has the advantage that you will always execute the most current version of the script, when you pull a newer version of the repo. The second is better if you don't want any extraneous files on your computer. After adding a new macro, and pasting, you can get rid of the repo and its files.
 
 # Newest Changes #
 
