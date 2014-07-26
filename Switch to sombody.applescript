@@ -3,6 +3,8 @@
 -- thanks fo Ice|House for help awk and such
 -- this one uses itsself name and lets the user input his password. Best way probably
 
+tell application "LaunchBar" to hide
+
 tell application "System Events"
 	activate
 	set {text returned:textReturned, button returned:buttonReturned} to (display dialog "Which person would you log into?" default answer "root" default button "OK")
@@ -12,6 +14,7 @@ tell application "System Events"
 		display dialog "Please provide a username"
 	end if
 end tell
+
 
 set username to do shell script "/usr/bin/id -u " & username
 do shell script "/System/Library/CoreServices/Menu\\ Extras/User.menu/Contents/Resources/CGSession -switchToUserID " & username
