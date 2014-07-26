@@ -13,24 +13,6 @@
 	- I can't remember from the top of my head what else I changed, but I tried to make this repository leaner and cleaner. I hope you appreciate.
 	- Please note: *Deactivate all Actions that you don't use in the Index in LaunchBar! Especially those in `_Archive`!*
 
-# OmniFocusCLI #
-
-OmniFocusCLI is a project by [Don](https://github.com/binaryghost/OmniFocusCLI) that enables task creation using a small shell script.  
-
-Installation instructions:
-
-	cd ~/Library/Application\ Support\LaunchBar\Actions
-	git submodule add https://github.com/binaryghost/OmniFocusCLI.git
-	git submodule init
-	git submodule update
-	ln -s OmniFocusCLI/OmniFocusCLI.sh OmniFocusCLI.sh
-	chmod a+x OmniFocusCLI.sh
-
-In Alfred create a new Shell shortcut:
-
-* *Command:* '/Users/YOU/Library/Application Support/LaunchBar/Actions/OmniFocusCLI.sh' {query}
-* Run silently.
-
 # loginitems #
 
 I've added a script that is **not** meant to be used with LaunchBar, Alfred or any other launcher. I assumed it's just a nice script to share.
