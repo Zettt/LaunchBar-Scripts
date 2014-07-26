@@ -1,28 +1,20 @@
--- Open in favorite app
--- 
--- Created by Zettt on 2011-09-03
--- Copyright 2010 Mac OS X Screencasts. All rights reserved.
---
---
--- On my computer I often have a viewer (a software that opens quickly and 
--- displays a file's content) and an editor (an app that I use to actually manipulate a file). 
--- I leave the standard association of files to their viewer, e.g. QuickLook or Preview.
--- And with this script I can now easily type a shortcut and open all of them
--- in my favorite editor. So I get best of both worlds. Quick preview and 
--- a quick editing possibility.
--- 
--- This script also considers multiple file "types", e.g. images and text.
--- It takes the whole selection and considers their extensions for opening in an
--- editor.
---
--- Version: 1.5
+(*
+Open in Favorite Editor
+
+On my computer I often have a viewer (a software that opens quickly and displays a file's content) and an editor (an app that I use to actually manipulate a file). I leave the standard association of files to their viewer, e.g. QuickLook or Preview. And with this script I can now easily type a shortcut and open all of them in my favorite editor. So I get best of both worlds. Quick preview and a quick editing possibility.
+
+This script also considers multiple file "types", e.g. images and text. It takes the whole selection and considers their extensions for opening in an editor.
+
+Created by Andreas "Zettt" Zeitler on 2011-09-03
+2010 Mac OS X Screencasts, zCasting 3000
+*)
+-- Changes
 -- 1.0: Initial release
 -- 1.1: Multiple file type support
 -- 1.2: Added suggestions for improvements
 -- 1.3: Documentation
 -- 1.4: Fix for permission error in Acorn 
 -- 1.5: Added video extensions (MPEG Streamclip)
--- 
 
 set fileList to {}
 

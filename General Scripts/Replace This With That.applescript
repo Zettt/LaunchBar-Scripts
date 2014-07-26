@@ -3,7 +3,7 @@
 -- 
 --  Useage: 
 --  1. Select some files in Finder
---  2. Bring up LaunchBar
+--  2. Run script
 --  3. Type in the abbreviation for this action
 --  4. Press return
 --  

@@ -1,3 +1,14 @@
+(*
+List to Reminders
+This script is a reimplementation of iOS' Drafts "List to Reminders" URL Action. The basic idea is that you have text on the clipboard, which this script takes and puts on a default Reminders list.
+
+Created by Andreas "Zettt" Zeitler on 2014-07-26
+Mac OS X Screencasts 2014.
+*)
+-- Changes
+-- 1.0: Initial version.
+-- 1.1: Added header, description and this change log
+
 -- get clipboard and separate lines
 set clipboardText to the clipboard as text
 set reminderLines to paragraphs of clipboardText

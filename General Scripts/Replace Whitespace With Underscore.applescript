@@ -3,14 +3,13 @@
 -- 
 --  Useage: 
 --  1. Select some files in Finder
---  2. Bring up LaunchBar
+--  2. Run script
 --  3. Type in the abbreviation for this action
 --  4. Press return
 --  
 --  Created by Zettt. 
 --  More info URL (german only): http://www.zettt.de/2009/07/mac-dateien-automatisch-umbenennen/
 -- 
-
 
 on run
 	tell application "Finder"
