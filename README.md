@@ -30,3 +30,4 @@ I've added a script that is **not** meant to be used with LaunchBar, Alfred or a
 loginitems description:
 
 This script is an attempt to speed up login times. The original idea came from [Mac OS X Hints](http://hints.macworld.com/article.php?story=20091108173250445). The idea is to "queue up" login items and launch them conscutively rather than all at once.
+
