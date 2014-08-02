@@ -15,6 +15,8 @@ Mac OS X Screencasts, zCasting 3000.
 -- 1.2:
 --    - Code refactored
 --    - Documentation
+-- 1.3:
+--    - Icons
 
 -- by default return a list to toggle and set a specific repeat mode	
 on run
@@ -23,10 +25,10 @@ on run
 	set currentRepeatMode to checkRepeatMode()
 	set nextRepeatMode to checkNextRepeatMode(currentRepeatMode)
 	
-	set repeatModes to repeatModes & [{title:"Toggle Repeat (is: \"" & currentRepeatMode & "\" will be: \"" & nextRepeatMode & "\")", action:"toggle"}] Â
-		& [{title:"None", action:"none"}] Â
-		& [{title:"One", action:"one"}] Â
-		& [{title:"All", action:"all"}]
+	set repeatModes to repeatModes & [{title:"Toggle Repeat (is: \"" & currentRepeatMode & "\" will be: \"" & nextRepeatMode & "\")", action:"toggle", icon:"Set iTunes Repeat Icon.pdf"}] Â
+		& [{title:"None", action:"none", icon:"None.pdf"}] Â
+		& [{title:"One", action:"one", icon:"One.pdf"}] Â
+		& [{title:"All", action:"all", icon:"All.pdf"}]
 	return repeatModes
 end run
 
@@ -107,7 +109,6 @@ end checkNextRepeatMode
 
 -- sets the repeat mode based on the string it receives
 on setRepeatMode(_repeatMode)
-	display notification "rep: " & _repeatMode
 	if _repeatMode is not "" then
 		tell application "iTunes"
 			tell application "System Events"
