@@ -1,11 +1,9 @@
 (*
-(*
 Set iTunes Repeat
 Sets iTunes' repeat mode using LaunchBar.
 
 Created by Andreas "Zettt" Zeitler on 2014-08-02
 Mac OS X Screencasts, zCasting 3000.
-*)
 *)
 -- Changes
 -- 1.0: Initial version.
@@ -17,19 +15,31 @@ Mac OS X Screencasts, zCasting 3000.
 --    - Documentation
 -- 1.3:
 --    - Icons
+--    - Fixed bug when iTunes is not running
 
 -- by default return a list to toggle and set a specific repeat mode	
 on run
 	set repeatModes to {}
 	
-	set currentRepeatMode to checkRepeatMode()
-	set nextRepeatMode to checkNextRepeatMode(currentRepeatMode)
+	set iTunesIsRunning to false
+	-- check if itunes is running
+	tell application "System Events"
+		if process "iTunes" exists then set iTunesIsRunning to true
+	end tell
 	
-	set repeatModes to repeatModes & [{title:"Toggle Repeat (is: \"" & currentRepeatMode & "\" will be: \"" & nextRepeatMode & "\")", action:"toggle", icon:"Set iTunes Repeat Icon.pdf"}] Â
-		& [{title:"None", action:"none", icon:"None.pdf"}] Â
-		& [{title:"One", action:"one", icon:"One.pdf"}] Â
-		& [{title:"All", action:"all", icon:"All.pdf"}]
-	return repeatModes
+	if iTunesIsRunning is true then
+		
+		set currentRepeatMode to checkRepeatMode()
+		set nextRepeatMode to checkNextRepeatMode(currentRepeatMode)
+		
+		set repeatModes to repeatModes & [{title:"Toggle Repeat (is: \"" & currentRepeatMode & "\" will be: \"" & nextRepeatMode & "\")", action:"toggle", icon:"Set iTunes Repeat Icon.pdf"}] Â
+			& [{title:"None", action:"none", icon:"None.pdf"}] Â
+			& [{title:"One", action:"one", icon:"One.pdf"}] Â
+			& [{title:"All", action:"all", icon:"All.pdf"}]
+		return repeatModes
+	else
+		return "iTunes needs to be running for this Action to work."
+	end if
 end run
 
 -- alternatively passing a string, such as "a" or "all", will also work
