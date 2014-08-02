@@ -14,7 +14,9 @@ Mac OS X Screencasts, zCasting 3000.
 --    - Displays repeat modes on run and allows to set or toggle
 -- 1.2:
 --    - Code refactored
+--    - Documentation
 
+-- by default return a list to toggle and set a specific repeat mode	
 on run
 	set repeatModes to {}
 	
@@ -28,6 +30,7 @@ on run
 	return repeatModes
 end run
 
+-- alternatively passing a string, such as "a" or "all", will also work
 on handle_string(_repeatMode)
 	if _repeatMode is not "" then
 		if _repeatMode is "n" or _repeatMode is "none" then
@@ -40,6 +43,7 @@ on handle_string(_repeatMode)
 	end if
 end handle_string
 
+-- these set the repeat mode based on which item is select in LaunchBar
 on toggle()
 	set currentRepeatMode to checkRepeatMode()
 	set nextRepeatMode to checkNextRepeatMode(currentRepeatMode)
@@ -58,6 +62,9 @@ on all()
 	setRepeatMode("all")
 end all
 
+-- below are the functions that do the heavy lifting
+--
+-- checks the current repeat mode and returns a string
 on checkRepeatMode()
 	set repeatMode to ""
 	tell application "iTunes"
@@ -85,6 +92,7 @@ on checkRepeatMode()
 	end tell
 end checkRepeatMode
 
+-- returns the next repeat mode based on the current one
 on checkNextRepeatMode(_currentRepeatMode)
 	if _currentRepeatMode is "" then
 		return
@@ -97,6 +105,7 @@ on checkNextRepeatMode(_currentRepeatMode)
 	end if
 end checkNextRepeatMode
 
+-- sets the repeat mode based on the string it receives
 on setRepeatMode(_repeatMode)
 	display notification "rep: " & _repeatMode
 	if _repeatMode is not "" then
