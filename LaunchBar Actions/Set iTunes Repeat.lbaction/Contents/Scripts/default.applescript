@@ -10,10 +10,8 @@ Mac OS X Screencasts, zCasting 3000.
 -- Changes
 -- 1.0: Initial version.
 -- 1.1: 
---    - New icon
---    - Code signed
---    - Code refactored
-
+--    - Accepts string "a" or "all" for repeat all, etc. See handle_string
+--    - Displays repeat modes on run and allows to set or toggle
 
 on run
 	set repeatModes to {}
@@ -25,7 +23,6 @@ on run
 end run
 
 on handle_string(_repeatMode)
-	display notification _repeatMode
 	if _repeatMode is not "" then
 		if _repeatMode is "n" or _repeatMode is "none" then
 			setRepeatMode("none")
