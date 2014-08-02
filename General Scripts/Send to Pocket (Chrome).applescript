@@ -7,11 +7,18 @@ Originally by Federicco Viticci
 http://www.macstories.net/reviews/pocket-releases-mac-app/
 Check out his post on how to get an API key.
 *)
+-- Changes:
+-- 1.0: Initial version
+-- 1.1: Error checking
 
 set PocUser to "YOURUSERNAME"
 set PocPass to "YOURPASSWORD"
 set PocAPI to "YOURAPIKEY"
 
+if PocUser is "YOURUSERNAME" then
+	display notification "No Username and Password defined. Please open this script in Script Editor for setup." with title "LaunchBar" subtitle "Send to Pocket"
+	return
+end if
 
 tell application "Google Chrome"
 	set myURL to URL of active tab of first window
