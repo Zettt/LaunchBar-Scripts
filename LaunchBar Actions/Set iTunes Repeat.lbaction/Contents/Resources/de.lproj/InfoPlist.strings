@@ -1,2 +1,2 @@
-"CFBundleName" = "Webseiten Verfügbarkeit prüfen";
-"LBSummary" = "Prüft Verfügbarkeit von Webseiten mittels downforeveryone.com.";
+"CFBundleName" = "iTunes Repeat Modus setzen";
+"LBSummary" = "Setzt den Repeat Modus von iTunes. Entweder per action oder text, z.B. \"a\" für \"Alle\".";
