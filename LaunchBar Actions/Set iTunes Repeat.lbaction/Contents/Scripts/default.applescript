@@ -12,10 +12,16 @@ Mac OS X Screencasts, zCasting 3000.
 -- 1.1: 
 --    - Accepts string "a" or "all" for repeat all, etc. See handle_string
 --    - Displays repeat modes on run and allows to set or toggle
+-- 1.2:
+--    - Code refactored
 
 on run
 	set repeatModes to {}
-	set repeatModes to repeatModes & [{title:"Toggle Repeat (is: \"" & checkRepeatMode() & "\" will be: \"" & nextRepeatMode() & "\")", action:"toggle"}] Â
+	
+	set currentRepeatMode to checkRepeatMode()
+	set nextRepeatMode to checkNextRepeatMode(currentRepeatMode)
+	
+	set repeatModes to repeatModes & [{title:"Toggle Repeat (is: \"" & currentRepeatMode & "\" will be: \"" & nextRepeatMode & "\")", action:"toggle"}] Â
 		& [{title:"None", action:"none"}] Â
 		& [{title:"One", action:"one"}] Â
 		& [{title:"All", action:"all"}]
@@ -35,7 +41,9 @@ on handle_string(_repeatMode)
 end handle_string
 
 on toggle()
-	display notification "toggle"
+	set currentRepeatMode to checkRepeatMode()
+	set nextRepeatMode to checkNextRepeatMode(currentRepeatMode)
+	setRepeatMode(nextRepeatMode)
 end toggle
 
 on none()
@@ -77,47 +85,28 @@ on checkRepeatMode()
 	end tell
 end checkRepeatMode
 
-on nextRepeatMode()
-	set repeatMode to ""
-	tell application "iTunes"
-		tell application "System Events"
-			-- figure out current repeat mode
-			if value of attribute "AXMenuItemMarkChar" of menu item "Off" of menu 1 of menu item "Repeat" of menu 1 of menu bar item "Controls" of menu bar 1 of application process "iTunes" is not missing value then
-				set repeatMode to "off"
-			else if value of attribute "AXMenuItemMarkChar" of menu item "All" of menu 1 of menu item "Repeat" of menu 1 of menu bar item "Controls" of menu bar 1 of application process "iTunes" is not missing value then
-				set repeatMode to "All"
-			else if value of attribute "AXMenuItemMarkChar" of menu item "One" of menu 1 of menu item "Repeat" of menu 1 of menu bar item "Controls" of menu bar 1 of application process "iTunes" is not missing value then
-				set repeatMode to "one"
-			end if
-			
-			--return repeatMode
-			
-			-- toggle repeat mode: off to all to one
-			if repeatMode is "" then
-				return
-			else if repeatMode is "off" then
-				return "All"
-				--click menu item "All" of menu 1 of menu item "Repeat" of menu 1 of menu bar item "Controls" of menu bar 1 of application process "iTunes"
-			else if repeatMode is "all" then
-				return "One"
-				--click menu item "One" of menu 1 of menu item "Repeat" of menu 1 of menu bar item "Controls" of menu bar 1 of application process "iTunes"
-			else if repeatMode is "one" then
-				return "Off"
-				--click menu item "Off" of menu 1 of menu item "Repeat" of menu 1 of menu bar item "Controls" of menu bar 1 of application process "iTunes"
-			end if
-		end tell
-	end tell
-end nextRepeatMode
+on checkNextRepeatMode(_currentRepeatMode)
+	if _currentRepeatMode is "" then
+		return
+	else if _currentRepeatMode is "none" or _currentRepeatMode is "None" then
+		return "All"
+	else if _currentRepeatMode is "all" or _currentRepeatMode is "All" then
+		return "One"
+	else if _currentRepeatMode is "one" or _currentRepeatMode is "One" then
+		return "Off"
+	end if
+end checkNextRepeatMode
 
 on setRepeatMode(_repeatMode)
+	display notification "rep: " & _repeatMode
 	if _repeatMode is not "" then
 		tell application "iTunes"
 			tell application "System Events"
-				if _repeatMode is "none" then
+				if _repeatMode is "none" or _repeatMode is "None" or _repeatMode is "Off" then
 					click menu item "Off" of menu 1 of menu item "Repeat" of menu 1 of menu bar item "Controls" of menu bar 1 of application process "iTunes"
-				else if _repeatMode is "all" then
+				else if _repeatMode is "all" or _repeatMode is "All" then
 					click menu item "All" of menu 1 of menu item "Repeat" of menu 1 of menu bar item "Controls" of menu bar 1 of application process "iTunes"
-				else if _repeatMode is "one" then
+				else if _repeatMode is "one" or _repeatMode is "One" then
 					click menu item "One" of menu 1 of menu item "Repeat" of menu 1 of menu bar item "Controls" of menu bar 1 of application process "iTunes"
 				end if
 			end tell
@@ -127,35 +116,3 @@ on setRepeatMode(_repeatMode)
 		return
 	end if
 end setRepeatMode
-
-on toggleRepeat()
-	tell application "iTunes"
-		tell application "System Events"
-			-- figure out current repeat mode
-			if value of attribute "AXMenuItemMarkChar" of menu item "Off" of menu 1 of menu item "Repeat" of menu 1 of menu bar item "Controls" of menu bar 1 of application process "iTunes" is not missing value then
-				set repeatMode to "off"
-			else if value of attribute "AXMenuItemMarkChar" of menu item "All" of menu 1 of menu item "Repeat" of menu 1 of menu bar item "Controls" of menu bar 1 of application process "iTunes" is not missing value then
-				set repeatMode to "All"
-			else if value of attribute "AXMenuItemMarkChar" of menu item "One" of menu 1 of menu item "Repeat" of menu 1 of menu bar item "Controls" of menu bar 1 of application process "iTunes" is not missing value then
-				set repeatMode to "one"
-			end if
-			
-			--return repeatMode
-			
-			-- toggle repeat mode: off to all to one
-			if repeatMode is "" then
-				return
-			else if repeatMode is "off" then
-				click menu item "All" of menu 1 of menu item "Repeat" of menu 1 of menu bar item "Controls" of menu bar 1 of application process "iTunes"
-			else if repeatMode is "all" then
-				click menu item "One" of menu 1 of menu item "Repeat" of menu 1 of menu bar item "Controls" of menu bar 1 of application process "iTunes"
-			else if repeatMode is "one" then
-				click menu item "Off" of menu 1 of menu item "Repeat" of menu 1 of menu bar item "Controls" of menu bar 1 of application process "iTunes"
-			end if
-		end tell
-	end tell
-	
-	tell application "LaunchBar" to hide
-	
-	return
-end toggleRepeat
