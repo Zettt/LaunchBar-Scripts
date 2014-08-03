@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconFile</key>
+	<string>Color Picker Icon</string>
+	<key>CFBundleName</key>
+	<string>Color Picker</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.macosxscreencasts.action.ColorPicker</string>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBScriptName</key>
+			<string>default.applescript</string>
+			<key>LBReturnsResult</key>
+			<false/>
+			<key>LBRunInBackground</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBSummary</key>
+		<string>Brings up the OS X color picker. Accepts an optional string (hex) to make the dialog come up with a specific color.</string>
+		<key>LBAuthor</key>
+		<string>Andreas Zeitler</string>
+		<key>LBEmail</key>
+		<string>azeitler@zettt.de</string>
+		<key>LBTwitter</key>
+		<string>@zettt</string>
+		<key>LBWebsite</key>
+		<string>macosxscreencasts.com</string>
+	</dict>
+</dict>
+</plist>

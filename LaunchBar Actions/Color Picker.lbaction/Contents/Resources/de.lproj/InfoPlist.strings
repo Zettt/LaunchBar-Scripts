@@ -1,0 +1,2 @@
+"CFBundleName" = "Farbdialog anzeigne";
+"LBSummary" = "Diese Action zeigt den Standard Farbdialog an. Alternativ kann man einen String (Hex) übermitteln um den Farbdialog mit einer bestimmten Farbe anzuzeigen.";
