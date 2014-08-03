@@ -7,7 +7,7 @@
 	<key>CFBundleName</key>
 	<string>Down For Everyone Or Just Me</string>
 	<key>CFBundleVersion</key>
-	<string>1.3.1</string>
+	<string>1.2</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.macosxscreencasts.action.DownForEveryoneOrJustMe</string>
 	<key>LBScripts</key>
