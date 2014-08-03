@@ -30,9 +30,9 @@ on checkAvailability(_testURL)
 		_testURL & Â
 		"' | awk 'BEGIN{IGNORECASE=1;FS=\"<body>|</body>\";RS=EOF} {print $2}'"
 	if cmd contains "is up" then
-		return "Site is up. It's just you."
+		return [{title:"Site is up. It's just you.", icon:"Up.pdf"}]
 	else if cmd contains "looks down" then
-		return "Site is down. It's not just you."
+		return [{title:"Site is down. It's not just you.", icon:"Down.pdf"}]
 	else
 		return "Error. Please provide valid URL."
 	end if
