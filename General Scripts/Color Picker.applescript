@@ -1,0 +1,2 @@
+activate
+choose color
