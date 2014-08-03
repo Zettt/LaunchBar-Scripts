@@ -25,23 +25,6 @@ end handle_string
 
 on checkAvailability(_testURL)
 	
-	(*
-	-- apparently this is not needed. 
-	-- strip off starting https:// and http://
-	if _testURL begins with "https://" then
-		set AppleScript's text item delimiters to "https://"
-		set the item_list to every text item of _testURL
-		set AppleScript's text item delimiters to ""
-		set _testURL to the item_list as string
-	else if _testURL begins with "http://" then
-		set AppleScript's text item delimiters to "http://"
-		set the item_list to every text item of _testURL
-		set AppleScript's text item delimiters to ""
-		set _testURL to the item_list as string
-	end if
-	set AppleScript's text item delimiters to ""
-	*)
-	
 	-- check website availability
 	set cmd to do shell script "curl --silent 'http://www.downforeveryoneorjustme.com/" & Â
 		_testURL & Â
@@ -53,4 +36,5 @@ on checkAvailability(_testURL)
 	else
 		return "Error. Please provide valid URL."
 	end if
+	
 end checkAvailability
