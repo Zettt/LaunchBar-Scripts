@@ -11,6 +11,7 @@ Copyright Mac OS X Screencasts 2014. All rights reserved.
 --    - New icon
 --    - Code signed
 --    - Code refactored
+-- 1.2: Status icons
 
 
 on run
