@@ -7,7 +7,7 @@
 	<key>CFBundleName</key>
 	<string>Color Picker</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.1.1</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.macosxscreencasts.action.ColorPicker</string>
 	<key>LBScripts</key>
@@ -20,6 +20,10 @@
 			<false/>
 			<key>LBRunInBackground</key>
 			<true/>
+			<key>LBAcceptedArgumentTypes</key>
+			<array>
+				<string>string</string>
+			</array>
 		</dict>
 	</dict>
 	<key>LBDescription</key>
