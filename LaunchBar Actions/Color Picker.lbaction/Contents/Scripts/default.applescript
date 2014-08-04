@@ -9,6 +9,7 @@ Mac OS X Screencasts, zCasting 3000.
 -- Changes
 -- 1.0: Initial version.
 -- 1.1: Hex conversion and string input
+-- 1.1.1: Added LBAcceptedArgumentTypes to Info.plist
 
 on run
 	activate

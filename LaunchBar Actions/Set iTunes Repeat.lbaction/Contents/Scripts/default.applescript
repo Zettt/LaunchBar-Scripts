@@ -16,6 +16,7 @@ Mac OS X Screencasts, zCasting 3000.
 -- 1.3:
 --    - Icons
 --    - Fixed bug when iTunes is not running
+-- 1.3.1: Added LBAcceptedArgumentTypes to Info.plist
 
 -- by default return a list to toggle and set a specific repeat mode	
 on run
