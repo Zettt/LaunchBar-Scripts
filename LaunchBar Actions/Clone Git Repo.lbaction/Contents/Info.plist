@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleName</key>
+	<string>Clone Git Repo</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.macosxscreencasts.CloneGitRepo</string>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBScriptName</key>
+			<string>default.sh</string>
+			<key>LBRequiresArgument</key>
+			<true/>
+			<key>LBRunInBackground</key>
+			<true/>
+			<key>LBAcceptedArgumentTypes</key>
+			<array>
+				<string>string</string>
+			</array>
+		</dict>
+	</dict>
+	<key>CFBundleExecutable</key>
+	<string></string>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBSummary</key>
+		<string>Clone a Git repository to ~/Downloads.</string>
+		<key>LBAuthor</key>
+		<string>Andreas Zeitler</string>
+		<key>LBEmail</key>
+		<string>contact@macosxscreencasts.com</string>
+		<key>LBWebsite</key>
+		<string>http://macosxscreencasts.com</string>
+		<key>LBTwitter</key>
+		<string>@zettt</string>
+	</dict>
+</dict>
+</plist>
