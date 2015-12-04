@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconFile</key>
+	<string>Focus Colored.pdf</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.macosxscreencasts.lb-focus</string>
+	<key>CFBundleName</key>
+	<string>Focus</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBAuthor</key>
+		<string>Andreas Zeitler</string>
+		<key>LBEmail</key>
+		<string>azeitler@zettt.de</string>
+		<key>LBSummary</key>
+		<string>Toggles Focus.app or let's you focus for a specific amount of time</string>
+		<key>LBTwitter</key>
+		<string>@zettt</string>
+		<key>LBWebsite</key>
+		<string>macosxscreencasts.com</string>
+	</dict>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBAcceptedArgumentTypes</key>
+			<array>
+				<string>string</string>
+			</array>
+			<key>LBResultType</key>
+			<string>unknown</string>
+			<key>LBRunInBackground</key>
+			<true/>
+			<key>LBScriptName</key>
+			<string>default.applescript</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
