@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconFile</key>
+	<string>OF Perspective Icon</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.LaunchBar.action.OmniFocusPerspective</string>
+	<key>CFBundleName</key>
+	<string>OmniFocus Perspective</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBAuthor</key>
+		<string>Andreas Zeitler</string>
+		<key>LBEmail</key>
+		<string>azeitler@zettt.de</string>
+		<key>LBSummary</key>
+		<string>Opens an OmniFocus Perspective with LaunchBar.</string>
+		<key>LBTwitter</key>
+		<string>@zettt</string>
+		<key>LBWebsite</key>
+		<string>macosxscreencasts.com</string>
+	</dict>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBAcceptedArgumentTypes</key>
+			<array>
+				<string>string</string>
+			</array>
+			<key>LBKeepWindowActive</key>
+			<true/>
+			<key>LBResultType</key>
+			<string>unknown</string>
+			<key>LBReturnsResult</key>
+			<true/>
+			<key>LBScriptName</key>
+			<string>default.applescript</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
