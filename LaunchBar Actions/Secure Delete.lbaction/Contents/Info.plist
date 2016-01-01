@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>com.macosxscreencasts.secure-delete</string>
+	<key>CFBundleName</key>
+	<string>Secure Delete</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBAuthor</key>
+		<string>Andreas Zeitler</string>
+		<key>LBEmail</key>
+		<string>zettt@macosxscreencasts.com</string>
+		<key>LBSummary</key>
+		<string>This action allows you to securely delete files and folders using LaunchBar directly, instead of "Empty Trash </string>
+		<key>LBTwitter</key>
+		<string>@zettt</string>
+		<key>LBWebsite</key>
+		<string>http://macosxscreencasts.com</string>
+	</dict>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBAcceptedArgumentTypes</key>
+			<array>
+				<string>path</string>
+			</array>
+			<key>LBRequiresArgument</key>
+			<true/>
+			<key>LBResultType</key>
+			<string>unknown</string>
+			<key>LBRunInBackground</key>
+			<true/>
+			<key>LBScriptName</key>
+			<string>default.sh</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
