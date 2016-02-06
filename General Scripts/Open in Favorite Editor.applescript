@@ -40,7 +40,7 @@ set videoFileList to {}
 set favVideoEditor to "MPEG Streamclip"
 
 -- audio
-set audioTypes to {"aif", "aiff", "aifc", "wav"}
+set audioTypes to {"aif", "aiff", "aifc", "wav", "m4a"}
 set audioFileList to {}
 set favAudioEditor to "Amadeus Pro"
 
