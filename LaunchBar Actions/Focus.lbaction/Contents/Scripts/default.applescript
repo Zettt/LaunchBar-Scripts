@@ -23,6 +23,10 @@ open focus://toggle
 *)
 
 on run
+	if application "Focus" is not running then
+		launch application "Focus"
+	end if
+	
 	open location "focus://toggle"
 	return
 end run
@@ -33,6 +37,10 @@ on handle_string(_time)
 end handle_string
 
 on focusForTime(_time)
+	if application "Focus" is not running then
+		launch application "Focus"
+	end if
+	
 	open location "focus://unfocus"
 	delay 0.4
 	open location "focus://focus?minutes=" & _time
