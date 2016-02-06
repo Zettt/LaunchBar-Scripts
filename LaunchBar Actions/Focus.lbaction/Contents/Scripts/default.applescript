@@ -7,6 +7,7 @@ Use as you wish. Andreas Zeitler 2015.
 *)
 -- Changes
 -- 1.0: Initial version.
+-- 1.1: Failed to run when Focus is not launched.
 
 (*
 Turn focus on
