@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIconFile</key>
-	<string>OF Perspective Icon</string>
+	<string>OF Perspective Icon.pdf</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.LaunchBar.action.OmniFocusPerspective</string>
+	<string>com.macosxscreencasts.action.OmniFocusPerspective</string>
 	<key>CFBundleName</key>
 	<string>OmniFocus Perspective</string>
 	<key>CFBundleVersion</key>
@@ -20,7 +20,7 @@
 		<string>Opens an OmniFocus Perspective with LaunchBar.</string>
 		<key>LBTwitter</key>
 		<string>@zettt</string>
-		<key>LBWebsite</key>
+		<key>LBWebsiteURL</key>
 		<string>macosxscreencasts.com</string>
 	</dict>
 	<key>LBScripts</key>

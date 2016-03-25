@@ -27,7 +27,7 @@ set imageTypes to {"png", "jpg", "jpeg", "tiff"}
 -- don't manipulate the following line
 set imageFileList to {}
 -- what's your favorite editor for this type of file?
-set favImageEditor to "Acorn"
+set favImageEditor to "Affinity Photo"
 
 -- text
 set textTypes to {"txt", "md"}
