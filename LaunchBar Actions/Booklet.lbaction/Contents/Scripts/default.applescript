@@ -11,6 +11,8 @@ Mac OS X Screencasts, zCasting 3000
 *)
 -- Changes
 -- 1.0: Initial version.
+-- 1.1: implemented handle_string (case sensitive).
+--        you can now also type in your bookmarklets' name.
 
 -- return list of all perspectives (with a nice fancypants icon)
 on run
@@ -28,7 +30,7 @@ end run
 -- open perspective directly
 -- note: this is case sensitive!
 on handle_string(_bookmkarklet)
-	-- in the future we could try to run a bookmarklet by the string passed into it
+	runBookmarklet(_bookmkarklet)
 end handle_string
 
 on runBookmarklet(_bookmarklet)
