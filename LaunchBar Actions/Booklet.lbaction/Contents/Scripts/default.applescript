@@ -46,6 +46,6 @@ on runBookmarklet(_bookmarklet)
 			end try
 		end try
 	end tell
-	--tell application "LaunchBar" to deactivate
+	tell application "LaunchBar" to hide
 	tell application "Google Chrome" to activate
 end runBookmarklet
